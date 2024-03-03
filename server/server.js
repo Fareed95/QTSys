@@ -18,11 +18,11 @@ const options = {
     },
     servers: [
       {
-        url: `https://localhost:${PORT}`,
+        url: `http://localhost:${PORT}`,
       },
     ],
   },
-  apis: ['./students/routes.js', './teachers/routes.js'],
+  apis: ['./routes/students.js'],
 }
 
 const specs = swaggerJSDoc(options)
