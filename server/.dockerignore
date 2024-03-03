@@ -1,0 +1,16 @@
+.git/
+.gitignore
+.dockerignore
+build.sh
+destroy.sh
+package-lock.json
+node_modules/
+Dockerfile
+docker-compose.yml
+chatbot/
+cropRecommender/
+diseasePrediction/
+fertilizerDetection/
+yieldPredictor/
+leaf_segmentation.ipynb
+requirements.txt

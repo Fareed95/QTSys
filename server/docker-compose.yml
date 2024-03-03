@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  server:
+    build: .
+    container_name: 'server'
+    ports:
+     - '5000:5000'
+    develop:
+      watch:
+      # - action: sync
+      #   path: .
+      #   target: /app/
+      - action: rebuild
+        # path: server.js
+        path: .
+  db:
+    image: 'postgres'
+    container_name: 'db'
+    # ports:
+    #   - 4321:5432
+    environment:
+      POSTGRES_PASSWORD: "password"
+      POSTGRES_USER: 'username'
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:

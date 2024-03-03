@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "docker-compose up -d",
+    "build": "./build.sh",
+    "migrateup": "npx knex migrate:up --knexfile db/knexfile.js",
+    "migratedown": "npx knex migrate:down --knexfile db/knexfile.js",
+    "seed": "npx knex seed:run --knexfile db/knexfile.js"
+  },
+  "author": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.3",
+    "knex": "^3.1.0",
+    "morgan": "^1.10.0",
+    "pg": "^8.11.3",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "uuid": "^9.0.1"
+  }
+}
